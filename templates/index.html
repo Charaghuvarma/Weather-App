@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style="background-color: rgb(98, 98, 98);">
+  <div class="container">
+    <h1>Weather App</h1>
+    <form id="weather-form">
+      <input type="text" id="city-input" placeholder="Enter a city name" required>
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weather-info"></div>
+    <video id="background-video" autoplay loop muted>
+      <source id="video-source" src="" type="video/mp4">
+    </video>
+    <div id="weather-condition"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
